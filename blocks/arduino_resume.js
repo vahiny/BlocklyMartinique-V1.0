@@ -65,7 +65,9 @@ head.load(
 "blocks/kit_velo/kit_velo_niv2.js",
 "blocks/led-rgb-ws2812b/led-rgb-ws2812b.js",
 "blocks/lcd_i2c/lcd_i2c.js",
-"blocks/robot_servo_martinique/robot_servo_martinique.js",
+"blocks/robot_servo_martinique/robot_servo_martinique.js",		// BLOCS AJOUTER JEROME MAUMET @@@@@@@@@@@@@@@@@@@@@@
+"blocks/robot_pas_a_pas_martinique/robot_papara_pas_a_pas.js",		// BLOCS AJOUTER JEROME MAUMET @@@@@@@@@@@@@@@@@@@@@@
+
 "blocks/matrix-led-rgb-ws2812/matrix-led-rgb-ws2812.js",
 "blocks/mbot/mbot_1.js",
 "blocks/mbot/mbot_2.js",

@@ -1510,6 +1510,69 @@
 	<!-- MARTINIQUE ROBOT SERVO 								@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 	
 	
+	<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  BLOCS ROBOTS MOTEUR PAS A PAS JEROME MAUMET  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+	
+	<category name="CAT_ROBOT_PAPARA_MOTEUR_PAS_A_PAS" colour="#DF0174">
+	<block type="base_setup"></block>
+		<block type="boucle_infinie"></block>
+		<block type="robot_papara_moteur_pas_a_pas_fin_de_programme"></block>
+		<category name="CAT_ROBOT_PAPARA_IN" colour="#DF0174">
+			<block type="robot_papara_button"></block>
+			<block type="robot_papara_line_finder"></block>
+			<block type="robot_papara_sharp"></block>
+		</category>
+		<category name="CAT_ROBOT_PAPARA_OUT" colour="#DF0174">
+			<block type="robot_papara_led">
+			<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">13</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="robot_papara_buzzer">
+			<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">7</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="papara_moteur_pas_a_pas">
+			<value name="SPEED">
+					<shadow type="math_number">
+						<field name="NUM">400</field>
+					</shadow>
+				</value>
+				<value name="NOMBRE_PAS">
+					<shadow type="math_number">
+						<field name="NUM">1</field>
+					</shadow>
+				</value>
+			</block>	
+		</category>
+	
+		
+	<category name="CAT_ROBOT_PAPARA_PAUSE" colour="#DF0174">
+			<block type="robot_papara_delay">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		
+		<category name="CAT_ROBOT_PAPARA_TELECOMMANDE_IR" colour="#DF0174">
+		<block type="robot_papara_infrarouge_reception"></block>
+			<block type="robot_papara_valeur_infrarouge"></block>
+			<block type="robot_papara_infrarouge_signal_suivant"></block>
+		</category>
+		
+		<sep></sep>
+	</category>
+
+			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  BLOCS ROBOTS  MOTEUR PAS A PAS JEROME MAUMET  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+	
+	
 	<category name="CAT_GROVE" colour="#8ec31f">
 		<category name="CAT_GROVE_IN" colour="#8ec31f">
 			<block type="grove_button"></block>

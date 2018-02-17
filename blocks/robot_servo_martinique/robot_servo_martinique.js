@@ -111,7 +111,7 @@ Blockly.Blocks['robot_papara_infrarouge_reception'] = {
         .appendField(Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT1)
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robot_servo_martinique/infrarouge.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
 	    .appendField(Blockly.Msg.ROBOT_PAPARA_LED_TEXT3)
-        .appendField(new Blockly.FieldTextInput('2',  Blockly.Arduino.pinDigitalValidator), 'PIN');
+        .appendField(new Blockly.FieldTextInput('7',  Blockly.Arduino.pinDigitalValidator), 'PIN');
     this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_LINE_TOOLTIP);
   }
@@ -123,7 +123,7 @@ Blockly.Blocks['robot_papara_valeur_infrarouge'] = {
     this.setColour("#8000FF");
 	this.setHelpUrl(Blockly.Msg.TEXT_ROBOT_PAPARA_SERVOMOTEURS_HELPURL);
     this.appendDummyInput("")
-        .appendField("valeur signal infrarouge décodé")
+        .appendField("valeur signal infrarouge")
          this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_LINE_TOOLTIP);
   }
@@ -135,16 +135,16 @@ Blockly.Blocks.robot_papara_infrarouge_signal_suivant= {
   init: function () {
         this.setColour("#8000FF");
 		this.setHelpUrl(Blockly.Msg.TEXT_ROBOT_PAPARA_SERVOMOTEURS_HELPURL);
-    this.appendDummyInput()
 	this.appendDummyInput()
              .appendField(Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT2)
 			 .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/robot_servo_martinique/infrarouge.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize));
-	this.appendDummyInput()
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.GROVE_INOUT_RELAY_TOOLTIP);
   }
 };
+
+
 
 Blockly.Blocks['robot_papara_ultrasonic_ranger'] = {
 	init: function() {
@@ -155,10 +155,50 @@ Blockly.Blocks['robot_papara_ultrasonic_ranger'] = {
         .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/200px-Twig_-_Ultrasonic_Ranger2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
         .appendField(Blockly.Msg.ROBOT_PAPARA_ULTRASON_TEXTE2)
         .appendField(new Blockly.FieldTextInput('8',  Blockly.Arduino.pinDigitalValidator), 'PIN')
+		this.appendDummyInput("")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOTS_PAPARA_Codebender, "Codebender" ],
+					[ Blockly.Msg.ROBOTS_PAPARA_IDEArduino, "IDEArduino" ]
+						]),
+				"MODE");
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TOOLTIP);
   }
 };
+
+// Blockly.Blocks['robot_papara_ultrasonic_ranger'] = {
+  //init: function() {
+	//this.setHelpUrl(Blockly.Msg.TEXT_ROBOT_PAPARA_SERVOMOTEURS_HELPURL);
+    //this.setColour("#1BEFE7");
+    //this.setHelpUrl(Blockly.Msg.TEXT_ROBOT_PAPARA_SERVOMOTEURS_HELPURL);
+    //this.appendDummyInput()
+	//.appendField(Blockly.Msg.ROBOT_PAPARA_ULTRASON_TEXTE1)
+        
+     //   .appendField(new Blockly.FieldImage(Blockly.pathToBlockly + 'blocks/grove/200px-Twig_-_Ultrasonic_Ranger2.jpg', Blockly.Arduino.imageSize, Blockly.Arduino.imageSize))
+		
+		
+	//	.appendField(
+	//			new Blockly.FieldDropdown([
+	//					[ Blockly.Msg.ROBOTS_PAPARA_Codebender, "Codebender" ],
+	//					[ Blockly.Msg.ROBOTS_PAPARA_IDEArduino, "IDEArduino" ]
+	//					]),
+	//			"MODE");
+				
+				
+	//this.appendValueInput("PIN1", 'Number')
+    //    .setCheck('Number')
+     //   .setAlign(Blockly.ALIGN_RIGHT)
+		
+     //   .appendField(Blockly.Msg.ROBOT_PAPARA_ULTRASON_TEXTE2);
+		
+		
+	//	this.setOutput(true, null);		
+    // this.setTooltip(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TOOLTIP);
+
+ // }
+//};
 
 Blockly.Blocks['robot_papara_sharp'] = {
 	init: function() {
@@ -170,6 +210,15 @@ Blockly.Blocks['robot_papara_sharp'] = {
         .appendField(Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE1)
         .appendField(new Blockly.FieldTextInput('1',  Blockly.Arduino.pinDigitalValidator), 'PIN')
     this.setOutput(true, 'Number');
+	this.appendDummyInput("")
+		.setAlign(Blockly.ALIGN_RIGHT)
+		.appendField("modèle")
+		.appendField(
+				new Blockly.FieldDropdown([
+						[ Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE2, "oa41SK" ],
+					[ Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE3, "oa21YK" ]
+						]),
+				"ChoixSharp")
     this.setTooltip(Blockly.Msg.GROVE_INOUT_ULTRASONIC_TOOLTIP);
   }
 };

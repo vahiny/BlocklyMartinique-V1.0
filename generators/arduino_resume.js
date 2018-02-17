@@ -56,6 +56,7 @@ head.load(
 "generators/arduino/lcd_i2c.js",
 "generators/arduino/led-rgb-ws2812b.js",
 "generators/arduino/robot_servo_martinique.js",						// BLOCS AJOUTER JEROME MAUMET @@@@@@@@@@@@@@@@@@@@@@
+"generators/arduino/robot_papara_pas_a_pas.js",						// BLOCS AJOUTER JEROME MAUMET @@@@@@@@@@@@@@@@@@@@@@
 "generators/arduino/matrix-led-rgb-ws2812.js",
 "generators/arduino/mbot_niv1.js",
 "generators/arduino/mbot_niv2.js",

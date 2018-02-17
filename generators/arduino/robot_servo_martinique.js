@@ -86,21 +86,48 @@ Blockly.Arduino.robot_papara_infrarouge_signal_suivant = function() {
 };
 
 Blockly.Arduino.robot_papara_ultrasonic_ranger = function() {
-  var dropdown_pin = this.getFieldValue('PIN');
+  var dropdown_MODETELEVERSEMENT = this.getFieldValue('MODE');
+   var dropdown_pin = this.getFieldValue('PIN');
   var dropdown_unit = this.getFieldValue('UNIT');
+  
   Blockly.Arduino.includes_['define_ultrasonic'] = '#include <Ultrasonic.h>\n';
-  Blockly.Arduino.definitions_['var_ultrasonic'+dropdown_pin] = 'Ultrasonic ultrasonic_'+dropdown_pin+'('+dropdown_pin+');\n';
-  var code='ultrasonic_'+dropdown_pin+'.MeasureInCentimeters()';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+Blockly.Arduino.definitions_['var_ultrasonic'+dropdown_pin] = 'Ultrasonic ultrasonic_'+dropdown_pin+'('+dropdown_pin+');\n';
+ 
+
+var code = "";
+  if(dropdown_MODETELEVERSEMENT=="Codebender"){
+	    code="ultrasonic_"+dropdown_pin+".MeasureInCentimeters()";
+  
+  
+  } else if (dropdown_MODETELEVERSEMENT=="IDEArduino") {
+  code="ultrasonic_"+dropdown_pin+".mesurer()";
+    }
+
+return [code, Blockly.Arduino.ORDER_ATOMIC];
+ 
 };
+
 
 
 
 Blockly.Arduino.robot_papara_sharp = function() {
+	var dropdown_ChoixSharp= this.getFieldValue('ChoixSharp');
   var dropdown_pin = this.getFieldValue('PIN');
-  var code = '(2400/(('+'analogRead(' + dropdown_pin + ')'+'-0.1)+0.5))';
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
+  
+  
+  var code = "";
+  if(dropdown_ChoixSharp=="oa41SK"){
+  code = "(2400/(("+"analogRead(" + dropdown_pin + ")"+"-0.1)+0.5))";
+  
+  } else if (dropdown_ChoixSharp=="oa21YK") {
+  code =  "(8479.4/(1+1.167*("+"analogRead(" + dropdown_pin + ")))"+"-5)";
+    }
+
+return [code, Blockly.Arduino.ORDER_ATOMIC];
+ 
 };
+
+  
 
 
 
@@ -111,8 +138,8 @@ Blockly.Arduino.robot_papara_servomoteurs= function() {
   var value_pin2 = Blockly.Arduino.valueToCode(this, 'PIN2', Blockly.Arduino.ORDER_ATOMIC);
 
 	Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
-  Blockly.Arduino.definitions_['var_servo' + value_pin1] = 'Servo servo_droit'+';\n';
-  Blockly.Arduino.definitions_['var_servo' + value_pin2] = 'Servo servo_gauche'+';\n';
+	Blockly.Arduino.definitions_['var_servo' + value_pin1] = 'Servo servo_droit'+';\n';
+	Blockly.Arduino.definitions_['var_servo' + value_pin2] = 'Servo servo_gauche'+';\n';
   
   
   var code = "";

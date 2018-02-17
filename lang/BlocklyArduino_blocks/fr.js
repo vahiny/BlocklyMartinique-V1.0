@@ -457,25 +457,25 @@ Blockly.Msg.CONVERSION_MAP_TOOLTIP = "ré-étalonne un nombre d'une fourchette d
 
 
 
-Blockly.Msg.CAT_ROBOT_PAPARA_FENUA = "ROBOT SERVO Martinique 4°";  
+Blockly.Msg.CAT_ROBOT_PAPARA_FENUA = "ROBOT Martinique ";  
 Blockly.Msg.CAT_ROBOT_PAPARA_IN = "capteurs et détecteurs";
 Blockly.Msg.CAT_ROBOT_PAPARA_OUT = "actionneurs";
 Blockly.Msg.CAT_ROBOT_PAPARA_PAUSE = "pause";
 
-Blockly.Msg.ROBOT_PAPARA_LED_TEXT1 = ""
-Blockly.Msg.ROBOT_PAPARA_LED_TEXT2 = "la diode " 
+Blockly.Msg.ROBOT_PAPARA_LED_TEXT1 = "";
+Blockly.Msg.ROBOT_PAPARA_LED_TEXT2 = "la diode " ;
 Blockly.Msg.ROBOT_PAPARA_LED_TEXT3 = "connecter en D";
 Blockly.Msg.ROBOT_PAPARA_LED_TEXT4 = "connectée en D";
 
 Blockly.Msg.ROBOT_PAPARA_BOUTON_POUSSOIR_TEXT1 = "Bouton poussoir appuyé";
 
-Blockly.Msg.ROBOT_PAPARA_BUZZER_TEXT1=""
-Blockly.Msg.ROBOT_PAPARA_BUZZER_TEXT2="le buzzer"
+Blockly.Msg.ROBOT_PAPARA_BUZZER_TEXT1="";
+Blockly.Msg.ROBOT_PAPARA_BUZZER_TEXT2="le buzzer";
 
-Blockly.Msg.ROBOT_PAPARA_DETECTEUR_LIGNE_TEXT1="Ligne noire"
-Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT1="Réception signal infrarouge"
-Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT2="Réception signal IR SUIVANT"
-Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT3="Valeur Signal IR"
+Blockly.Msg.ROBOT_PAPARA_DETECTEUR_LIGNE_TEXT1="Ligne noire";
+Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT1="Réception signal infrarouge";
+Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT2="Réception signal IR suivant";
+Blockly.Msg.ROBOT_PAPARA_INFRAROUGE_TEXT3="Valeur Signal IR";
 
 
 Blockly.Msg.ROBOT_PAPARA_SERVOMOTEURS = "Robot avec servo";
@@ -484,10 +484,14 @@ Blockly.Msg.ARDUINO_ROBOT_PAPARA_SERVO_DROIT = "Servo droit connecté en D";
 Blockly.Msg.ARDUINO_ROBOT_PAPARA_SERVO_GAUCHE = "Servo gauche connecté en D";
 Blockly.Msg.ARDUINO_ROBOT_PAPARA_BOUCLE_INFINIE="boucle infinie";
 
-Blockly.Msg.ROBOT_PAPARA_ULTRASON_TEXTE1="Distance cm "
-Blockly.Msg.ROBOT_PAPARA_ULTRASON_TEXTE2=" connecté en D"
-Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE1=" OA41SK connecter en A"
-Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE2=" 0A21YK connecter en A"
+Blockly.Msg.ROBOT_PAPARA_ULTRASON_TEXTE1="Distance cm ";
+Blockly.Msg.ROBOT_PAPARA_ULTRASON_TEXTE2=" connecté en D";
+Blockly.Msg.ROBOTS_PAPARA_Codebender="Codebender";
+Blockly.Msg.ROBOTS_PAPARA_IDEArduino= "IDE arduino";
+
+Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE1=" connecter en A"
+Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE2="0A41SK"
+Blockly.Msg.ROBOT_PAPARA_SHARP_TEXTE3="0A21YK"
 
 Blockly.Msg.ROBOTS_PAPARA_STOP = "stop";
 Blockly.Msg.ROBOTS_PAPARA_BACKWARD = "reculer";
@@ -498,10 +502,15 @@ Blockly.Msg.ROBOTS_PAPARA_DROITESURPLACE="rotation à droite";
 Blockly.Msg.ROBOTS_PAPARA_GAUCHESURPLACE="rotation à gauche";
 
 
+
 Blockly.Msg.TEXT_ROBOT_PAPARA_SERVOMOTEURS_HELPURL = "http://www.education.pf/itereva/colpapara/index.php/fr/disciplines-2/technologie/ressources-robotique-pour-les-enseignants"
 
 //@@@@@@@@@@@@@@@@@@@@@@         JEROME MAUMET ROBOT A SERVOMOTEURS         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+//@@@@@@@@@@@@@@@@@@@@@@         JEROME MAUMET ROBOT  PAS A PAS         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Blockly.Msg.CAT_ROBOT_PAPARA_MOTEUR_PAS_A_PAS = "ROBOT Pas à Pas Martinique ";  
+Blockly.Msg.PAPARA_MOTEUR_PAS_A_PAS_TEXT1="Moteur pas à pas"
 
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_DHT_HELPURL = "https://github.com/adafruit/DHT-sensor-library";
